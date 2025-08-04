@@ -13,7 +13,7 @@ import {
   Plus,
   Trash2,
 } from 'lucide-react';
-import Card from '../components/card';
+import Card from '../components/Card';
 
 const GPADashboard = () => {
   const [activeSection, setActiveSection] = useState('dashboard');

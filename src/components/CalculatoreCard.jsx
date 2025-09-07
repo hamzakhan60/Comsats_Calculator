@@ -164,7 +164,7 @@ const FlexibleCalculator = ({
           <div className="mt-4 sm:mt-2 flex justify-center sm:justify-end">
             <div className="relative rounded-full p-2 shadow-2xl">
               <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 sm:border-8 border-gray-200 flex items-center justify-center bg-white">
-               {result<=4 ? (<div className="text-center">
+               {result<=4 || title=="Aggregate Calculator" ? (<div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-gray-800">
                     {typeof result === 'number' ? result.toFixed(1) : result}
                   </div>

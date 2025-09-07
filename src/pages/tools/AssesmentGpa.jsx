@@ -6,8 +6,9 @@ import MotivationCard from '../../components/MotivationCard';
 import FlexibleCalculator from '../../components/CalculatoreCard';
 import ResultsSidebar from '../../components/DetailedResult';
 import TipsSection from '../../components/Suggestions';
+import AssesmentGpa from '../../components/AssesmentSection';
 
-const GPACalculator = () => {
+const AssesementCalculator = () => {
     const [totalCr, setTotalCr] = useState(0);
     const [totalGradePoints, setTotalGradePoints] = useState(0.0);
     
@@ -137,26 +138,12 @@ const GPACalculator = () => {
 
                         {/* Right Column - Calculator */}
                         <div className="lg:col-span-2 order-1 lg:order-2">
-                            {/* Motivational Quote */}
-                            <MotivationCard />
 
                             <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 sm:gap-6">
                                 <div className="xl:col-span-3 w-full mx-auto space-y-8 sm:space-y-12">
                                     {/* GPA Calculator */}
                                     <div>
-                                        <FlexibleCalculator
-                                            title="GPA Calculator (Grade Based)"
-                                            data={gpaData}
-                                            onDataChange={handleGpaChange}
-                                            columnConfig={gpaConfig}
-                                            showDeleteButton={true}
-                                            showAddButton={true}
-                                            addButtonText="Add Course"
-                                            onAddRow={addGpaRow}
-                                            onDeleteRow={deleteGpaRow}
-                                            result={currentGPA}
-                                            resultLabel="GPA"
-                                        />
+                                        <AssesmentGpa/>
                                     </div>
                                 </div>
                             </div>
@@ -164,14 +151,6 @@ const GPACalculator = () => {
                     </div>
                 </div>
 
-                {/* Results Sidebar */}
-                <div className='max-w-7xl mb-5 mx-auto px-3 sm:px-6'>
-                    <ResultsSidebar
-                        {...gpaResultData}
-                        headerBgColor="bg-blue-800"
-                        addPercentage={false}
-                    />
-                </div>
 
                 {/* Tips Section */}
                 <TipsSection
@@ -183,4 +162,4 @@ const GPACalculator = () => {
     );
 };
 
-export default GPACalculator;
+export default AssesementCalculator;

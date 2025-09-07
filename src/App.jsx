@@ -9,6 +9,8 @@ import GPACalculator from './pages/tools/Gpa';
 import CGPACalculator from './pages/tools/Cgpa';
 import CGPAForecaster from './pages/tools/forcaster';
 import NotFound from './pages/NotFound';
+import Testing from './pages/tools/testing';
+import AssesementCalculator from './pages/tools/AssesmentGpa';
 
 function App() {  
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/tools/gpa" element={<GPACalculator/>} />
         <Route path="/tools/cgpa" element={<CGPACalculator/>} />
         <Route path="/tools/forecaster" element={<CGPAForecaster/>} />
+        <Route path="/tools/testing" element={<Testing/>}/>
+        <Route path="/tools/assesment-gpa" element={<AssesementCalculator/>}/>
         <Route path="/*" element={<NotFound/>} />
         {/* Add more tools as needed */}
 
